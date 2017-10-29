@@ -1,0 +1,32 @@
+<div class="summary-inner">
+    <div class="summary-groups-wrapper" [ngClass]="{'hidden':data.groups && checkToHiddenGroups(data.groups)}">
+        <div>
+            <span class="summary-title-num">1</span>
+            <span  class="summary-title">Selected Groups</span>
+        </div>
+        <div *ngFor="let group of data.groups" class="summary-groups">
+            <div *ngFor="let device of group.devices">
+                <span *ngIf="device.active">{{device.name}}</span>
+            </div> 
+        </div> 
+    </div>
+    
+    <div class="summary-protocol-wrapper" [ngClass]="{'hidden':data.protocols && checkToHidden(data.protocols)}">
+        <div>
+            <span class="summary-title-num">2</span>
+            <span  class="summary-title">Selected Protocols</span>
+        </div>
+        <div *ngFor="let protocol of data.protocols" class="summary-protocols">
+            <span *ngIf="protocol.active">{{protocol.name}}</span>
+        </div> 
+    </div>
+    
+    <div class="summary-period-wrapper">
+        <span class="summary-title-num">3</span>
+        {{data.currentPeriod?.name}}
+    </div>
+    <div class="summary-buttons">
+        <button (click)="clear()" class="summary-clear-button">Clear</button>
+        <button (click)="sentData()" class="summary-send-button"> <span>Start Learning</span></button>
+    </div>
+</div>

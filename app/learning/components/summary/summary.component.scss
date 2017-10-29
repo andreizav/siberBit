@@ -1,0 +1,56 @@
+.summary-groups-wrapper, .summary-protocol-wrapper, .summary-period-wrapper {
+    border-bottom: 1px solid #ccc;
+    &.hidden {
+        color: #ccc;
+    }
+
+    .summary-title-num {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .summary-title {
+        font-size: 16px;
+    }
+}
+
+.summary-groups-wrapper {
+    padding-bottom: 10px;
+    .summary-groups {
+        padding-left: 15px;
+    }
+}
+
+.summary-protocol-wrapper {
+    padding: 10px 0;
+    .summary-protocols {
+        padding-left: 15px;
+    }
+}
+
+.summary-period-wrapper {
+    padding: 10px 0;
+}
+
+.summary-groups {
+    margin-bottom: 10px;
+}
+
+.summary-buttons {
+    margin-top:10px;
+    .summary-send-button {
+        background: #184369;
+        & > span:before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-color: transparent transparent transparent #fff;
+            position: relative;
+            top: 0;
+            margin-right: 10px;
+        }
+    }
+}

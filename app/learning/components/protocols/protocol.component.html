@@ -1,0 +1,10 @@
+<div class="protocol" *ngFor="let protocol of protocols">
+    <label>
+    <input
+        type="checkbox"
+        [(ngModel)]="protocol.active"
+        (click)="toogleCheck(protocol)"
+        name="checkedIn">
+        {{protocol.name}}
+    </label>
+</div>

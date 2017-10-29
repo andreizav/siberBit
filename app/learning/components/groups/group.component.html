@@ -1,0 +1,23 @@
+<div class="group">
+    <div class="group-row" [ngClass]="{'minimized':isExpanded}" (click)="isExpanded = !isExpanded">
+        <label (click)="$event.preventDefault()">
+        <input
+            type="checkbox"
+            [(ngModel)]="isAllChecked"
+            (click)="checkAll($event)">
+            {{group.name}}
+        </label>
+    </div>
+    
+    <div class="devices">
+        <div class="device" *ngFor="let device of group.devices">
+            <label>
+            <input
+                type="checkbox"
+                (click)="checkSelected(device)"
+                [(ngModel)]="device.active">
+                {{device.name}}
+            </label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.learning {
+    color: #337db8;
+
+    .protocols, .periods {
+        background: #d8e8f6;
+        padding: 10px;
+    }
+    
+    .groups, .periods-wrapper, .protocols-wrapper, .summary {
+        display: inline-block;
+        width: 24%;
+        min-width: 300px;
+        vertical-align: top;
+        margin-right:10px;
+    }
+
+    summary {
+        border: 1px solid #ebf2f9;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}
+

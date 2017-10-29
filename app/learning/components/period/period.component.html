@@ -1,0 +1,10 @@
+<div class="period" *ngFor="let period of times;let i = index">
+  <label>
+    <input 
+      type="radio"
+      name="period"
+      [checked]="currentPeriod === period"
+      (click)="setPeriod(period)">
+    {{period.name}}
+  </label>
+</div>

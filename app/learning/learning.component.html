@@ -1,0 +1,22 @@
+<div class="learning">
+    <div class="groups">
+        <span class="title">1 Select Blackboxes</span>
+        <group *ngFor="let group of groups" [group]="group"></group>
+    </div>
+    <div class="protocols-wrapper">
+        <span class="title">2 Select Protocols</span>
+        <div class="protocols">
+            <protocol [protocols]="protocols"></protocol>
+        </div>
+    </div>
+    <div class="periods-wrapper">
+        <span class="title">3 Select Time period</span>
+        <div class="periods">
+            <period [times]="times" [currentPeriod]="currentPeriod" (setCurrentPeriod)="setCurrentPeriod($event)"></period>
+        </div> 
+    </div>
+    <div class="summary">
+        <span class="title">Summary</span>
+        <summary [data]="data" (clearData)="clearData()"></summary>
+    </div>
+</div>
